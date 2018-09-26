@@ -1,9 +1,9 @@
 module.exports = function getZerosCount(number) {
   // your implementation
-  var a= number.toString().length;
-  var res=0;
-  for(var i =1;i<a+4;i++){
-    res+=Math.floor((number/Math.pow(5,i)));
+  let res = 0,i=1;
+  while(Math.trunc(number/Math.pow(5,i))>=1){
+    res+=Math.floor(number/Math.pow(5,i));
+    i++;
   }
-  return (res);
+  return res;
 }
